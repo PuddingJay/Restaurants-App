@@ -1,0 +1,126 @@
+.cafes {
+  display: grid;
+  grid-row-gap: 25px;
+}
+@media screen and (min-width: 650px) {
+  .movies {
+    grid-template-columns: 1fr 1fr;
+  }
+ 
+  .movie {
+    grid-template-columns: auto 1fr;
+  }
+ 
+  .movie .movie__title, .detail-menu, .review{
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+ 
+  .movie .movie__overview {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .detail-food{
+    grid-column-start: 1;
+  }
+
+  .detail-drink {
+    grid-column-start:2;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .cafes {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 25px;
+  }
+  .cafe-item__title{
+    font-size: 21px;
+  }
+  
+}
+
+@media screen and (min-width: 900px) {
+  
+  .headline {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+  }
+
+  .cafes {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+  }
+
+}
+
+@media screen and (min-width: 1200px) {
+  main {
+      max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .header__menu {
+      display: none;
+  }
+}
+
+
+@media screen and (max-width: 499px) {
+  .explore{
+    padding: 0 50px;
+  }
+  .nav {
+      z-index: 10;
+      background-color: #fff;
+      width: 90%;
+      position: absolute;
+
+      /* This trasform moves the drawer off canvas. */
+      left: -100%;
+
+      /* Optionally, we animate the drawer. */
+      transition: all 0.3s ease;
+  }
+
+  .open {
+    left:0;
+  }
+
+  .nav__item {
+      display: list-item;
+      border-bottom: 2px solid #E0E0E0;
+      width: 100%;
+      text-align: left;
+  }
+  .nav a {
+    font-size: 14px;
+  }
+
+  .movie__overview, .movie__info, .review {
+    width: 90%;
+  }
+}
+
+/* 
+* Hero
+*/
+
+@media screen and (max-width: 600px) {
+  .hero {
+    background: url('../public/images/heros/hero-image_4-small.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 800px) {
+  .hero {
+    background: url('../public/images/heros/hero-image_4-large.jpg') fixed;
+    background-position: center;
+    background-size: auto;
+  }
+}
